@@ -12,9 +12,9 @@ const routes = [
     component: MemoriesPage
   },
   {
-    path: 'memories/:id',
+    path: '/memories/:id',
     component: () => {
-      import('../pages/MemoryPage.vue'); // lazy loading
+      import("../pages/MemoryDetails.vue"); // lazy load MemoryDetails route
     }
   }
 ]
