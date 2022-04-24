@@ -1,5 +1,5 @@
 <template>
-  <base-layout :title="title">
+  <base-layout title="Details" page-default-back-link="/memories">
     <h2>The Details</h2>
   </base-layout>
 </template>

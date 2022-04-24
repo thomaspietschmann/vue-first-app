@@ -13,9 +13,7 @@ const routes = [
   },
   {
     path: '/memories/:id',
-    component: () => {
-      import("../pages/MemoryDetails.vue"); // lazy load MemoryDetails route
-    }
+    component: () => import('../pages/MemoryDetails.vue')
   }
 ]
 
