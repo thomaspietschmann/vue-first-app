@@ -38,6 +38,24 @@ const store = createStore({
       }
    
     }
+  },
+  mutations: {
+    addMemory(state, memoryData) {
+      const newMemory = {
+        id: new Date().toISOString(),
+        title: memoryData.title,
+        image: memoryData.image,
+        text: memoryData.text,
+      }
+
+      state.memories.unshift(newMemory);
+    }
+  },
+  actions: {
+    addMemory(context, memoryData) {
+      // or reach out to database here
+      context.commit('addMemory', memoryData);
+    }
   }
 });
 

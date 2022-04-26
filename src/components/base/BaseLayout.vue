@@ -2,10 +2,15 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-       <ion-buttons slot="start">
-        <ion-back-button :default-href="pageDefaultBackLink"></ion-back-button>
-      </ion-buttons>
+        <ion-buttons slot="start">
+          <ion-back-button
+            :default-href="pageDefaultBackLink"
+          ></ion-back-button>
+        </ion-buttons>
         <ion-title>{{ title }}</ion-title>
+        <ion-buttons slot="end">
+          <slot name="actions-end"></slot>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -22,7 +27,7 @@ import {
   IonTitle,
   IonContent,
   IonBackButton,
-  IonButtons
+  IonButtons,
 } from "@ionic/vue";
 
 export default {
@@ -34,7 +39,7 @@ export default {
     IonTitle,
     IonContent,
     IonBackButton,
-    IonButtons
+    IonButtons,
   },
 };
 </script>
