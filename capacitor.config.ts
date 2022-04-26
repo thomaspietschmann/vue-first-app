@@ -1,9 +1,9 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.gruseljs.de',
   appName: 'vue-first-app',
-  webDir: 'dist',
+  webDir: 'public',
   bundledWebRuntime: false
 };
 
