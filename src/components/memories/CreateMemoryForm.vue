@@ -10,6 +10,15 @@
         <ion-input type="url" v-model="enteredImageUrl" required></ion-input>
       </ion-item>
       <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="" alt="">
+        </ion-thumbnail>
+        <ion-button fill="clear">
+          <ion-icon :icon="camera" slot="start"></ion-icon>
+          Take Photo
+        </ion-button>
+      </ion-item>
+      <ion-item>
         <ion-label position="floating">Description</ion-label>
         <ion-textarea rows="5" v-model="enteredText"></ion-textarea>
       </ion-item>
@@ -19,6 +28,9 @@
 </template>
     
 <script>
+
+import {camera } from "ionicons/icons";
+
 import {
   IonList,
   IonItem,
@@ -26,11 +38,14 @@ import {
   IonInput,
   IonTextarea,
   IonButton,
+  IonThumbnail,
+  IonIcon
 } from "@ionic/vue";
 
 export default {
   data() {
     return {
+      camera,
       enteredTitle: "",
       enteredText: "",
       enteredImageUrl: "",
@@ -54,6 +69,8 @@ export default {
     IonInput,
     IonTextarea,
     IonButton,
+    IonThumbnail,
+    IonIcon
   },
 };
 </script>
