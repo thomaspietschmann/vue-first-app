@@ -1,6 +1,6 @@
 {
 	"appId": "com.gruseljs.de",
 	"appName": "vue-first-app",
-	"webDir": "public",
+	"webDir": "dist",
 	"bundledWebRuntime": false
 }
